@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guitar Course Syllabus - Brochure</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .course-card {
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+    
+    .watermark-bg {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><path d="M30 20h40v60H30z" stroke="white" stroke-width="0.5" opacity="0.1"/><circle cx="50" cy="35" r="8" stroke="white" stroke-width="0.5" opacity="0.1"/><path d="M35 50h30M35 55h30M35 60h30M35 65h30" stroke="white" stroke-width="0.5" opacity="0.1"/></svg>');
+      background-repeat: repeat;
+      background-size: 120px;
+    }
+    
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+        font-size: 12px !important;
+        margin: 0 !important;
+        padding: 10px !important;
+      }
+      
+      .bg-gradient-to-br, .bg-gradient-to-b, .watermark-bg {
+        background: white !important;
+      }
+      
+      .text-white {
+        color: black !important;
+      }
+      
+      .course-card {
+        border: 2px solid #333 !important;
+        page-break-inside: avoid;
+        margin-bottom: 15px !important;
+      }
+      
+      .beginner-card {
+        border-color: #f59e0b !important;
+      }
+      
+      .intermediate-card {
+        border-color: #10b981 !important;
+      }
+      
+      .advanced-card {
+        border-color: #8b5cf6 !important;
+      }
+      
+      .print-header {
+        text-align: center;
+        font-size: 24px !important;
+        font-weight: bold;
+        margin-bottom: 20px !important;
+        color: black !important;
+      }
+      
+      .contact-info {
+        display: block !important;
+        text-align: center;
+        margin-top: 20px !important;
+        padding: 10px !important;
+        border-top: 2px solid #333 !important;
+        font-size: 10px !important;
+      }
+      
+      .mobile-only {
+        display: none !important;
+      }
+      
+      .grid {
+        display: block !important;
+      }
+      
+      .course-card {
+        width: 100% !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .mobile-grid {
+        display: block !important;
+      }
+      
+      .course-card {
+        margin-bottom: 20px;
+      }
+      
+      .mobile-padding {
+        padding: 16px !important;
+      }
+      
+      .mobile-title {
+        font-size: 2.5rem !important;
+        line-height: 1.2 !important;
+      }
+    }
+    
+    .level-badge {
+      position: absolute;
+      top: -5px;
+      right: 20px;
+      padding: 6px 14px;
+      border-radius: 18px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      z-index: 10;
+    }
+    
+    .beginner-badge {
+      background: linear-gradient(45deg, #fbbf24, #f59e0b);
+      color: white;
+    }
+    
+    .intermediate-badge {
+      background: linear-gradient(45deg, #34d399, #10b981);
+      color: white;
+    }
+    
+    .advanced-badge {
+      background: linear-gradient(45deg, #a78bfa, #8b5cf6);
+      color: white;
+    }
+  </style>
+</head>
+<body class="relative min-h-screen w-full bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white watermark-bg">
+  
+  <!-- Header Section -->
+  <div class="relative z-10 text-center mb-8 md:mb-12 mobile-padding p-6">
+    <div class="inline-block">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 mobile-title print-header bg-gradient-to-r from-yellow-400 via-green-400 to-purple-500 bg-clip-text text-transparent">
+        🎸 Guitar Course Syllabus
+      </h1>
+      <p class="text-lg md:text-xl mb-2 bg-gradient-to-r from-amber-300 via-teal-300 to-violet-400 bg-clip-text text-transparent font-semibold">Complete Learning Path for Guitar Mastery</p>
+      <div class="w-24 h-1 bg-gradient-to-r from-yellow-400 via-green-400 to-purple-500 mx-auto rounded-full mb-2"></div>
+      <p class="text-sm bg-gradient-to-r from-amber-200 via-teal-200 to-violet-300 bg-clip-text text-transparent font-medium">Professional Guitar Training • All Skill Levels • Expert Instructors</p>
+    </div>
+  </div>
+
+  <!-- Course Cards Container -->
+  <div class="relative z-10 px-4 md:px-12">
+    <div class="grid gap-6 md:gap-8 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mobile-grid max-w-7xl mx-auto">
+      
+      <!-- Beginner Level -->
+      <div class="course-card beginner-card relative rounded-3xl shadow-2xl bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-600 text-white overflow-hidden">
+        <div class="level-badge beginner-badge">Level 1</div>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <i class="fas fa-seedling text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold">Beginner</h2>
+              <p class="text-sm opacity-90">Foundation & Basics</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Introduction to guitar, posture, tuning, and types</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Holding the plectrum, finger exercises</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Basic scale exercises and understanding metronome</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Open chords, reading chord diagrams</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Strumming patterns and chord transitions</p>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-4 border-t border-white border-opacity-20">
+            <p class="text-xs opacity-75 text-center">Duration: 2-3 months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Intermediate Level -->
+      <div class="course-card intermediate-card relative rounded-3xl shadow-2xl bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 text-white overflow-hidden">
+        <div class="level-badge intermediate-badge">Level 2</div>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <i class="fas fa-chart-line text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold">Intermediate</h2>
+              <p class="text-sm opacity-90">Skills & Techniques</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Fretboard navigation and note identification</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Major, minor pentatonic, and chromatic scales</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Intervals, rhythm, capo usage, barre & power chords</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Playing with backing tracks, solos, and riffs</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Advanced rhythm, time signatures, arpeggios</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Ornaments like slides, hammer-ons, tapping</p>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-4 border-t border-white border-opacity-20">
+            <p class="text-xs opacity-75 text-center">Duration: 4-6 months</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advanced Level -->
+      <div class="course-card advanced-card relative rounded-3xl shadow-2xl bg-gradient-to-br from-purple-500 via-violet-600 to-indigo-700 text-white overflow-hidden md:col-span-2 lg:col-span-1">
+        <div class="level-badge advanced-badge">Level 3</div>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
+              <i class="fas fa-crown text-xl"></i>
+            </div>
+            <div>
+              <h2 class="text-2xl md:text-3xl font-bold">Advanced</h2>
+              <p class="text-sm opacity-90">Mastery & Performance</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Fingerstyle and palm mute techniques</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Complex chords, modes, ragas, and composition</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Fingerpicking, alternate picking, soloing techniques</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Songwriting and original compositions</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Harmony, counterpoint, orchestration, effects</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fas fa-check-circle text-lg mt-1 opacity-80"></i>
+              <p class="text-sm leading-relaxed">Genre-based soloing and stage performance skills</p>
+            </div>
+          </div>
+          
+          <div class="mt-6 pt-4 border-t border-white border-opacity-20">
+            <p class="text-xs opacity-75 text-center">Duration: 6+ months</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Information (Print Version) -->
+  <div class="contact-info hidden">
+    <p><strong>Guitar Course Academy</strong></p>
+    <p>📞 Contact: +91-8849489767 | 📧 Email: info@guitarcourse.com</p>
+    <p>🌐 Website: www.guitarcourse.com | 📍 Location: Your City, India</p>
+    <p style="margin-top: 10px; font-style: italic;">Start your musical journey today! 🎵</p>
+  </div>
+
+  <!-- Footer for Screen Version -->
+  <div class="mobile-only relative z-10 text-center mt-12 mb-8 px-4">
+    <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-6 mx-auto max-w-2xl">
+      <h3 class="text-xl font-bold mb-3 bg-gradient-to-r from-yellow-300 via-green-300 to-purple-400 bg-clip-text text-transparent">Ready to Start Your Musical Journey?</h3>
+      <p class="text-sm mb-4 bg-gradient-to-r from-orange-300 via-emerald-300 to-indigo-300 bg-clip-text text-transparent font-medium">Join thousands of students who have mastered guitar with our structured approach</p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center text-sm">
+        <div class="flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-300 via-green-300 to-purple-400 bg-clip-text text-transparent">
+          <i class="fas fa-phone text-yellow-300"></i>
+          <span>+91-8849489767</span>
+        </div>
+        <div class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-300 via-emerald-300 to-indigo-300 bg-clip-text text-transparent">
+          <i class="fas fa-envelope text-emerald-300"></i>
+          <span>info@guitarcourse.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
